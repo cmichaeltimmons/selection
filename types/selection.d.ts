@@ -88,6 +88,8 @@ declare class Selection {
 
     off<E extends keyof SelectionEvents>(ev: E, cb: SelectionEvents[E]): this;
 
+    removeAll<E extends keyof SelectionEvents>(ev: E): this;
+
     resolveSelectables(): void;
 
     keepSelection(): void;
