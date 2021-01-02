@@ -559,6 +559,16 @@ function Selection(options = {}) {
         },
 
         /**
+         * Removes all event listeners for event
+         * @param event
+         * @param cb
+         */
+        removeAll(event) {
+            that._eventListener[event] = [];
+            return that;
+        },
+
+        /**
          * Can be used if during a selection elements have been added.
          * Will update everything which can be selected.
          */
